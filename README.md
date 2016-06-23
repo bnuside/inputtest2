@@ -1,0 +1,1 @@
+All input types of Android EditText.
