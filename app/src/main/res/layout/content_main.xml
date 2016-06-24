@@ -230,7 +230,7 @@
             android:maxLength="1000"
             android:layout_alignParentTop="true"
             android:gravity="top|start"
-            android:hint="feedback_content_hint"
+            android:hint="test_big"
             />
 
         <android.support.v7.widget.AppCompatEditText
