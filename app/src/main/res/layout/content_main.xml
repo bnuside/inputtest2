@@ -26,6 +26,14 @@
         android:inputType="textAutoComplete"/>
 
     <EditText
+        android:id="@+id/alphaBetaOnlyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="01-alphabetaOnly"
+        android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        android:inputType="textAutoCorrect"/>
+
+    <EditText
         android:id="@+id/search_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -133,7 +141,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="19-textUri"
-        android:inputType="textUri"/>
+        android:inputType="textUri"
+        android:imeOptions="actionGo"/>
 
     <EditText
         android:layout_width="match_parent"

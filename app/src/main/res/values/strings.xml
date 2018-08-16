@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Input输入框</string>
     <string name="action_settings">Settings</string>
+    <string name="fake_skype">Fake Skype</string>
+    <string name="fack_whatsapp">Fake WhatsApp</string>
 </resources>

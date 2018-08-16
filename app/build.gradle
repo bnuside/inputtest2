@@ -1,28 +1,99 @@
+
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    signingConfigs {
+        Fakes {
+            keyAlias 'inputType'
+            keyPassword 'temp0000'
+            storeFile file('/Users/side/Documents/workspace/NumbersOnly/current.keystore')
+            storePassword 'temp0000'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
     defaultConfig {
-        applicationId 'yuside.cn.inputtype'
+        applicationId 'edits.sele.space'
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 21
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.Fakes
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+//        debug {
+//            minifyEnabled false
+//            debuggable true
+//            applicationIdSuffix ".debug"
+//        }
     }
     productFlavors {
+        fakeFacebook {
+            applicationId 'com.facebook.katana'
+            versionCode getVersionCode(100000)
+            versionName getVersionName('1.0.1')
+            buildConfigField "String", "APP_NAME", "Fake Facebook"
+            signingConfig signingConfigs.Fakes
+        }
+        fakeMessenger {
+            applicationId 'com.facebook.orca'
+            versionCode getVersionCode(100001)
+            versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
+        fakeWhatsapp {
+            applicationId 'com.whatsapp'
+            versionCode getVersionCode(100002)
+            versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
+        fakeIns {
+            applicationId 'com.instagram.android'
+            versionCode getVersionCode(100003)
+            versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
+        fakeTelegram {
+            applicationId 'org.telegram.messenger'
+            versionCode getVersionCode(100004)
+            versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
+        fakeMsg {
+            applicationId 'com.android.mms'
+            versionCode getVersionCode(100005)
+            versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+}
+
+def getVersionCode(int versionCode) {
+    if (hasProperty("VersionCode")) {
+        return Integer.parseInt(getProperty("VersionCode").toString())
+    }
+
+    return versionCode
+}
+
+def getVersionName(String versionName) {
+    if (hasProperty("VersionName")) {
+        versionName = getProperty("VersionName")
+    }
+
+    return versionName
 }

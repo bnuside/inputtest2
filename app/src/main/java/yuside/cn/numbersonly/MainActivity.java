@@ -5,9 +5,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+//        Button testButton = (Button)findViewById(R.id.testButton);
+//        testButton.setOnClickListener(mBtnListener);
+
+        setTitle(BuildConfig.FLAVOR);
+
     }
 
     @Override
@@ -49,4 +58,18 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+//    private View.OnClickListener mBtnListener = new View.OnClickListener(){
+//        public void onClick(View v){
+//            switch (v.getId()) {
+//                case R.id.testButton:
+//                    EditText ip = (EditText)findViewById(R.id.inputEdit);
+//                    ip.setText("Hello, World!");
+//                    break;
+//                default:
+//                    Log.d("SIDE", "test");
+//            }
+//        }
+//
+//    };
 }
