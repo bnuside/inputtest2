@@ -6,7 +6,7 @@ android {
         Fakes {
             keyAlias 'inputTypes'
             keyPassword 'temp0000'
-            storeFile file('/Users/side/Documents/workspace/NumbersOnly/current.keystore')
+            storeFile file('current.keystore')
             storePassword 'temp0000'
         }
     }
