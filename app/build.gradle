@@ -34,6 +34,12 @@ android {
 //        }
     }
     productFlavors {
+        default {
+            applicationId 'edits.sele.space'
+            versionCode getVersionCode(200000)
+            versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
         fakeFacebook {
             applicationId 'com.facebook.katana'
             versionCode getVersionCode(100000)
