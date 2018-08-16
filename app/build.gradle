@@ -84,8 +84,7 @@ dependencies {
 
 def getVersionCode(int versionCode) {
     if (hasProperty("VersionCode")) {
-        finalVcode = versionCode + Integer.parseInt(getProperty("VersionCode").toString())
-        return finalVcode
+        return versionCode + Integer.parseInt(getProperty("VersionCode").toString())
     }
 
     return versionCode
