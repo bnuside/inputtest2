@@ -4,7 +4,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         Fakes {
-            keyAlias 'inputType'
+            keyAlias 'inputTypes'
             keyPassword 'temp0000'
             storeFile file('/Users/side/Documents/workspace/NumbersOnly/current.keystore')
             storePassword 'temp0000'
@@ -38,7 +38,7 @@ android {
             applicationId 'com.facebook.katana'
             versionCode getVersionCode(100000)
             versionName getVersionName('1.0.1')
-            buildConfigField "String", "APP_NAME", "Fake Facebook"
+//            buildConfigField "String", "APP_NAME", "Fake Facebook"
             signingConfig signingConfigs.Fakes
         }
         fakeMessenger {
