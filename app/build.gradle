@@ -14,7 +14,7 @@ android {
     buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId 'edits.sele.space'
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 21
         versionName "1.1"
@@ -69,6 +69,13 @@ android {
             applicationId 'com.android.mms'
             versionCode getVersionCode(100005)
             versionName getVersionName('1.0.1')
+            signingConfig signingConfigs.Fakes
+        }
+        forAutoTest {
+            applicationId 'edits.sele.space'
+            versionCode getVersionCode(100006)
+            versionName getVersionName('1.0.1')
+//            buildConfigField "String", "APP_NAME", "Fake Facebook"
             signingConfig signingConfigs.Fakes
         }
     }

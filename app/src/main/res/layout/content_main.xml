@@ -8,6 +8,7 @@
 <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lists"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,14 +16,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorFade"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="yuside.cn.numbersonly.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <EditText
+        android:id="@+id/textAutoComplete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="01-textAutoComplete"
+        android:fadingEdge="horizontal"
         android:inputType="textAutoComplete"/>
 
     <EditText
@@ -34,7 +38,7 @@
         android:inputType="textAutoCorrect"/>
 
     <EditText
-        android:id="@+id/search_btn"
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="02-search"
@@ -42,102 +46,119 @@
         android:imeOptions="actionSearch"/>
 
     <EditText
+        android:id="@+id/textCapCharacters"
         android:layout_width="match_parent"
         android:hint="03-testCapCharacters"
         android:layout_height="wrap_content"
         android:inputType="textCapCharacters"/>
 
     <EditText
+        android:id="@+id/textAutoCorrect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="04-textAutoCorrect"
         android:inputType="textAutoCorrect"/>
 
     <EditText
+        android:id="@+id/textCapSentences"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="05-textCapSentences"
         android:inputType="textCapSentences"/>
 
     <EditText
+        android:id="@+id/textCapWords"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="06-textCapWords"
         android:inputType="textCapWords"/>
 
     <EditText
+        android:id="@+id/textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="07-textEmailAddress"
         android:inputType="textEmailAddress"/>
 
     <EditText
+        android:id="@+id/textFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="08-textFilter"
         android:inputType="textFilter"/>
 
     <EditText
+        android:id="@+id/textEmailSubject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="09-textEmailSubject"
         android:inputType="textEmailSubject"/>
 
     <EditText
+        android:id="@+id/textImeMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="10-textImeMultiLine"
         android:inputType="textImeMultiLine"/>
 
     <EditText
+        android:id="@+id/textLongMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="11-textLongMessage"
         android:inputType="textLongMessage"/>
 
     <EditText
+        android:id="@+id/textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="12-textMultiLine"
         android:inputType="textMultiLine"/>
 
     <EditText
+        android:id="@+id/textNoSuggestions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="13-textNoSuggestions"
         android:inputType="textNoSuggestions"/>
 
     <EditText
+        android:id="@+id/textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="14-textPassword"
         android:inputType="textPassword"/>
 
     <EditText
+        android:id="@+id/textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="15-textPersonName"
         android:inputType="textPersonName"/>
 
     <EditText
+        android:id="@+id/textPhonetic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="16-textPhonetic"
         android:inputType="textPhonetic"/>
 
     <EditText
+        android:id="@+id/textPostalAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="17-textPostalAddress"
         android:inputType="textPostalAddress"/>
 
     <EditText
+        android:id="@+id/textShortMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="18-textShortMessage"
         android:inputType="textShortMessage"/>
 
     <EditText
+        android:id="@+id/textUri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="19-textUri"
@@ -145,24 +166,28 @@
         android:imeOptions="actionGo"/>
 
     <EditText
+        android:id="@+id/textVisiblePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="20-textVisiblePassword"
         android:inputType="textVisiblePassword"/>
 
     <EditText
+        android:id="@+id/textWebEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="21-textWebEditText"
         android:inputType="textWebEditText"/>
 
     <EditText
+        android:id="@+id/textWebEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="22-textWebEmailAddress"
         android:inputType="textWebEmailAddress"/>
 
     <EditText
+        android:id="@+id/textWebPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="23-textWebPassword"
@@ -179,7 +204,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputEdit2"
+        android:id="@+id/numberPassword"
         android:digits="0123456789"
         android:hint="25-numberPassword"
         android:inputType="numberPassword"/>
@@ -187,7 +212,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputEdit3"
+        android:id="@+id/number"
         android:hint="26-number"
         android:inputType="number"/>
 
@@ -195,29 +220,33 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputEdit4"
+        android:id="@+id/datetime"
         android:hint="27-datetime"
         android:inputType="datetime"/>
 
     <EditText
+        android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="28-date"
         android:inputType="date"/>
 
     <EditText
+        android:id="@+id/numberSigned"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="29-numberSigned"
         android:inputType="numberSigned"/>
 
     <EditText
+        android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="30-phone"
         android:inputType="phone"/>
 
     <EditText
+        android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="31-time"
@@ -230,10 +259,10 @@
         >
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/text"
+            android:id="@+id/test_big"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/text2"
+            android:layout_above="@+id/feedback_email_hint"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:maxLength="1000"
@@ -243,7 +272,7 @@
             />
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/text2"
+            android:id="@+id/feedback_email_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="1"
@@ -252,6 +281,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="8dp"
             android:hint="feedback_email_hint"
+            android:textColorHint="@color/colorFadeText"
             />
 
     </RelativeLayout>
