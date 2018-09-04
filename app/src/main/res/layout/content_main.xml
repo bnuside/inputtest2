@@ -21,11 +21,26 @@
     tools:context="yuside.cn.numbersonly.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
+    <EditText
+        android:id="@+id/textAutoCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="01-textAutoCorrect"
+        android:inputType="textAutoCorrect"/>
+
+    <EditText
+        android:id="@+id/textCapCharacters"
+        android:layout_width="match_parent"
+        android:hint="02-testCapCharacters"
+        android:layout_height="wrap_content"
+        android:inputType="textCapCharacters"/>
+
     <EditText
         android:id="@+id/textAutoComplete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="01-textAutoComplete"
+        android:hint="03-textAutoComplete"
         android:fadingEdge="horizontal"
         android:inputType="textAutoComplete"/>
 
@@ -33,7 +48,7 @@
         android:id="@+id/alphaBetaOnlyEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="01-alphabetaOnly"
+        android:hint="0x-alphabetaOnly"
         android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
         android:inputType="textAutoCorrect"/>
 
@@ -41,23 +56,9 @@
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="02-search"
+        android:hint="04-search"
         android:singleLine="true"
         android:imeOptions="actionSearch"/>
-
-    <EditText
-        android:id="@+id/textCapCharacters"
-        android:layout_width="match_parent"
-        android:hint="03-testCapCharacters"
-        android:layout_height="wrap_content"
-        android:inputType="textCapCharacters"/>
-
-    <EditText
-        android:id="@+id/textAutoCorrect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="04-textAutoCorrect"
-        android:inputType="textAutoCorrect"/>
 
     <EditText
         android:id="@+id/textCapSentences"
